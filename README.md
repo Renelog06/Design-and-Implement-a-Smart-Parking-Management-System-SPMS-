@@ -71,6 +71,42 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 | CSV (optional) | Report export format |
 
 ---
+🔐 1. ADMIN – Quản trị viên
+Có quyền cao nhất, được phép cấu hình toàn bộ hệ thống.
+
+✅ Quyền của Admin:
+Chức năng	Mô tả
+Cấu hình bãi đỗ	Thiết lập tổng số slot, khu vực, loại xe
+Quản lý chỗ đỗ	Thêm/sửa/xóa slot
+Đặt mức phí	Giá theo giờ, lũy tiến, phí mở đầu
+Xem báo cáo	Thống kê doanh thu, lượng xe
+Xuất file	Báo cáo dưới dạng CSV hoặc TXT
+Xóa dữ liệu cũ	Ví dụ: transaction > 30 ngày
+
+👷 2. PARKING ATTENDANT – Nhân viên trông xe
+Có quyền thao tác với xe và chỗ đỗ nhưng không được cấu hình hệ thống.
+
+✅ Quyền của Attendant:
+Chức năng	Mô tả
+Check-in xe	Gán xe vào slot còn trống, ghi thời gian
+Check-out xe	Trả slot, tính phí, ghi thời gian ra
+Xem slot trống	Hiển thị slot đang còn khả dụng
+Kiểm tra xe đang đỗ	Danh sách xe chưa check-out
+Ngăn đăng ký trùng	Không cho xe vào nếu chưa check-out trước đó
+In hóa đơn .txt	Sau check-out
+
+🚗 3. VEHICLE OWNER – Chủ phương tiện
+Giao diện thân thiện, chỉ cho phép các chức năng cơ bản như xem, đăng ký và thanh toán.
+
+✅ Quyền của Owner:
+Chức năng	Mô tả
+Tìm chỗ trống	Xem các slot có thể vào
+Đăng ký xe	Tự nhập biển số để hệ thống check-in
+Xem phí đỗ xe	Tính phí theo thời gian đã đỗ
+Thanh toán	Hiển thị hóa đơn
+Xem lịch sử	Thời gian đã đỗ trước đó, số tiền đã trả
+
+
 
 ## 🌟 Extended Features (Grouped)
 
