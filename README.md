@@ -16,6 +16,28 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 
 ## 🔐 Roles and Features
 
+Below are the permissions and features available for each role:
+
+### 🛡️ Admin
+- Configure parking lot (set total slots)
+- Set hourly rates
+- Add, update, or delete parking slots
+- View and export revenue reports
+- Monitor overall system performance
+
+### 👷 Parking Attendant
+- Check-in vehicles: assign available slots
+- Check-out vehicles: release slots and calculate fees
+- View current slot availability
+- Prevent duplicate check-ins
+
+### 🚗 Vehicle Owner
+- View available parking slots
+- Register/check-in their vehicle
+- View current parking fee
+- Pay and get receipt
+- Track their parking history
+
 | Role | Features |
 |------|----------|
 | Admin | Manage slots, set hourly rates, export revenue reports |
@@ -71,42 +93,6 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 | CSV (optional) | Report export format |
 
 ---
-🔐 1. ADMIN – Quản trị viên
-Có quyền cao nhất, được phép cấu hình toàn bộ hệ thống.
-
-✅ Quyền của Admin:
-Chức năng	Mô tả
-Cấu hình bãi đỗ	Thiết lập tổng số slot, khu vực, loại xe
-Quản lý chỗ đỗ	Thêm/sửa/xóa slot
-Đặt mức phí	Giá theo giờ, lũy tiến, phí mở đầu
-Xem báo cáo	Thống kê doanh thu, lượng xe
-Xuất file	Báo cáo dưới dạng CSV hoặc TXT
-Xóa dữ liệu cũ	Ví dụ: transaction > 30 ngày
-
-👷 2. PARKING ATTENDANT – Nhân viên trông xe
-Có quyền thao tác với xe và chỗ đỗ nhưng không được cấu hình hệ thống.
-
-✅ Quyền của Attendant:
-Chức năng	Mô tả
-Check-in xe	Gán xe vào slot còn trống, ghi thời gian
-Check-out xe	Trả slot, tính phí, ghi thời gian ra
-Xem slot trống	Hiển thị slot đang còn khả dụng
-Kiểm tra xe đang đỗ	Danh sách xe chưa check-out
-Ngăn đăng ký trùng	Không cho xe vào nếu chưa check-out trước đó
-In hóa đơn .txt	Sau check-out
-
-🚗 3. VEHICLE OWNER – Chủ phương tiện
-Giao diện thân thiện, chỉ cho phép các chức năng cơ bản như xem, đăng ký và thanh toán.
-
-✅ Quyền của Owner:
-Chức năng	Mô tả
-Tìm chỗ trống	Xem các slot có thể vào
-Đăng ký xe	Tự nhập biển số để hệ thống check-in
-Xem phí đỗ xe	Tính phí theo thời gian đã đỗ
-Thanh toán	Hiển thị hóa đơn
-Xem lịch sử	Thời gian đã đỗ trước đó, số tiền đã trả
-
-
 
 ## 🌟 Extended Features (Grouped)
 
@@ -193,3 +179,50 @@ python main.py
 - [ ] GUI (Tkinter / Flask)
 - [ ] Admin login system
 - [ ] SMS/Email notifications
+
+## 🔐 Role-Based Access & Permissions
+
+### 🛡️ 1. ADMIN – Administrator
+Has the highest level of access and is authorized to configure the entire system.
+
+✅ **Admin Permissions:**
+
+| Function | Description |
+|----------|-------------|
+| Configure parking lot | Set total slots, zones, and vehicle types |
+| Manage parking slots | Add, update, delete slots |
+| Set pricing | Define hourly rate, tiered pricing, base fees |
+| View reports | Generate revenue and occupancy statistics |
+| Export reports | Export data in CSV or TXT format |
+| Delete old records | Remove outdated transactions (e.g., older than 30 days) |
+
+---
+
+### 👷 2. PARKING ATTENDANT – Staff
+Has permission to manage vehicles and slots, but cannot configure system settings.
+
+✅ **Attendant Permissions:**
+
+| Function | Description |
+|----------|-------------|
+| Vehicle check-in | Assign vehicles to available slots, record time |
+| Vehicle check-out | Release slot, calculate fee, record exit time |
+| View available slots | Display current available parking spots |
+| View parked vehicles | Show list of vehicles not yet checked out |
+| Prevent duplicate check-in | Block vehicles that haven't checked out from re-entering |
+| Print receipt (.txt) | Generate a text receipt after check-out |
+
+---
+
+### 🚗 3. VEHICLE OWNER – Customer
+Simplified interface with access to basic viewing, registration, and payment features.
+
+✅ **Vehicle Owner Permissions:**
+
+| Function | Description |
+|----------|-------------|
+| Find available slots | View list of available parking spots |
+| Register vehicle | Enter license plate to check-in |
+| View parking fee | Display calculated parking fee |
+| Make payment | View and confirm parking fee payment |
+| View parking history | Show past check-ins, durations, and fees paid |
