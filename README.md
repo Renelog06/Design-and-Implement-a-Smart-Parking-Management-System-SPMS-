@@ -230,7 +230,7 @@ Simplified interface with access to basic viewing, registration, and payment fea
 ## 🚀 How to Run
 
 ```bash
-git clone https://github.com/your-username/smart-parking-system.git
+git clone https://github.com/Renelog06/Design-and-Implement-a-Smart-Parking-Management-System-SPMS-.git
 cd smart-parking-system
 python main.py
 ```
