@@ -226,3 +226,20 @@ Simplified interface with access to basic viewing, registration, and payment fea
 | View parking fee | Display calculated parking fee |
 | Make payment | View and confirm parking fee payment |
 | View parking history | Show past check-ins, durations, and fees paid |
+
+## 🚀 How to Run
+
+```bash
+git clone https://github.com/your-username/smart-parking-system.git
+cd smart-parking-system
+python main.py
+```
+
+---
+
+## 📦 Dependencies
+
+- Python 3.x
+- No third-party libraries required (`json`, `datetime`, `os` from standard library)
+
+---
