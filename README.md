@@ -63,7 +63,7 @@ Below are the permissions and features available for each role:
 - [ ] `data/transactions.json`
 
 ### 📸 Documentation
-- [ ] Complete `README.md`
+- [v] Complete `README.md`
 - [ ] System flowchart
 - [ ] Program screenshots
 
@@ -73,11 +73,11 @@ Below are the permissions and features available for each role:
 
 | Member | Responsibility | Files |
 |--------|----------------|--------|
-| [You] | Team leader, integration, main menu | `main.py` |
-| Member 1 | Role and login management | `user.py` |
-| Member 2 | Parking slot module | `slot.py` |
-| Member 3 | Vehicle and transaction logic | `vehicle.py`, `transaction.py` |
-| Member 4 | Data persistence and report generation | `data_handler.py`, `report.py` |
+| Phu Anh | Team leader, integration, main menu | `main.py` |
+| Phi Truong | Role and login management | `user.py` |
+| Hieu | Parking slot module | `slot.py` |
+| Hung | Vehicle and transaction logic | `vehicle.py`, `transaction.py` |
+| Nhut  | Data persistence and report generation | `data_handler.py`, `report.py` |
 
 ---
 
