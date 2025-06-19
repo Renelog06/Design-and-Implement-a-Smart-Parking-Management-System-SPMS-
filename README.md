@@ -54,30 +54,7 @@ Below are the permissions and features available for each role:
 - [ ] `slot.py`: Parking slot management **[📦 uses JSON]**
 - [ ] `vehicle.py`: Vehicle information
 - [ ] `transaction.py`: Check-in/out and fee calculation **[📦 uses JSON]**
-- [ ] `data_handler.py`: JSON file read/write **[🔧 JSON helper functions]**
-- [ ] `report.py`: Revenue statistics and reports **[📦 uses JSON]**
-
-### 📂 JSON Data Files
-- [ ] `data/slots.json`
-- [ ] `data/vehicles.json`
-- [ ] `data/transactions.json`
-
-### 📸 Documentation
-- [v] Complete `README.md`
-- [ ] System flowchart
-- [ ] Program screenshots
-
----
-
-## 🧑‍💻 Team Members & Responsibilities
-
-| Member | Responsibility | Files |
-|--------|----------------|--------|
-| Phu Anh | Team leader, integration, main menu | `main.py` |
-| Phi Truong | Role and login management | `user.py` |
-| Hieu | Parking slot module | `slot.py` |
-| Hung | Vehicle and transaction logic | `vehicle.py`, `transaction.py` |
-| Nhut  | Data persistence and report generation | `data_handler.py`, `report.py` |
+- [ ] `data_handler.py`: Truong | Data persistence and report generation | `data_handler.py`, `report.py` |
 
 ---
 
