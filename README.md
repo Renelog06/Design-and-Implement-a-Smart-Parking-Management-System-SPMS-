@@ -49,7 +49,8 @@ Below are the permissions and features available for each role:
 ## ✅ Task Checklist
 
 ### 🗂 Core Modules
-- [ ] `main.py`: Command-line interface (CLI) menu
+- [x] `main.py`: Command-line interface (CLI) menu
+- [x] `auth.py`: Login
 - [ ] `user.py`: Role and login simulation
 - [ ] `slot.py`: Parking slot management **[📦 uses JSON]**
 - [ ] `vehicle.py`: Vehicle information
