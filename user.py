@@ -36,19 +36,5 @@ class User:
         print("1. View available slots")
         print("2. Pay parking fees")
 
-u = input("Enter username: ")
-p = input("Enter password: ")
 
-data = User.login(u, p)
-if data:
-    print(f"Login successful! Welcome {data.username} ")
-    print(f"Your role is: {data.role}")
-    if data.role == "admin":
-        User.admin_menu()
-    elif data.role == "attendant":
-        User.attendant_menu()
-    elif data.role == "owner":
-        User.owner_menu()
-else:
-    print("Login failed! Please check your username and password.")
 
