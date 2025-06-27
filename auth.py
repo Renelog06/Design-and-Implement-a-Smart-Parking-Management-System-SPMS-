@@ -1,21 +1,8 @@
-import json
+from data_handler import load_json, save_json
 from mockuser import User
 
-User_file = "data/users.json"
-
-def load_user():
-    try:
-        with open(User_file, "r") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return []
-    
-def save_user(users):
-    with open(User_file, "w") as f:
-        return json.dump(users, f, indent = 4)
-
 def register():
-    users = load_user()
+    users = load_json("data/users.json")
     user_name = input("Enter your name: ").strip()
     if any(i["username"] == user_name for i in users):
         print("❌ Username already exists.")
@@ -23,11 +10,11 @@ def register():
     password = input("Enter your Password: ").strip()
     role = "owner"
     users.append({"username": user_name, "password": password, "role": role})
-    save_user(users)
+    save_json("data/users.json", users)
     print("✅ Registration successful")
 
 def login():
-    users = load_user()
+    users = load_json("data/users.json")
     user_name = input("Username: ").strip()
     password = input("Password: ").strip()
     for i in users:
