@@ -24,17 +24,22 @@ class User:
             return User(username, cls.users[username]["role"])
         else:
             return None
+
+    @staticmethod
     def admin_menu():
         print("1. Manage slots")
         print("2. Set hourly rates")
         print("3. Export revenue reports")
+
+    @staticmethod
     def attendant_menu():
         print("1. Check-in vehicles")
         print("2. Check-out vehicles")
         print("3. Update slots")
+
+    @staticmethod
     def owner_menu():
         print("1. View available slots")
         print("2. Pay parking fees")
-
 
 
