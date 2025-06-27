@@ -55,8 +55,8 @@ Below are the permissions and features available for each role:
 - [ ] `slot.py`: Parking slot management **[📦 uses JSON]**
 - [ ] `vehicle.py`: Vehicle information
 - [ ] `transaction.py`: Check-in/out and fee calculation **[📦 uses JSON]**
-- [ ] `data_handler.py`: JSON file read/write **[🔧 JSON helper functions]**
-- [ ] `report.py`: Revenue statistics and reports **[📦 uses JSON]**
+- [x] `data_handler.py`: JSON file read/write **[🔧 JSON helper functions]**
+- [x] `report.py`: Revenue statistics and reports **[📦 uses JSON]**
 
 ### 📂 JSON Data Files
 - [ ] `data/slots.json`
