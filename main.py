@@ -1,5 +1,5 @@
 from auth import login, register
-from mockuser import show_menu_by_role
+from user import User
 
 def check_in_vehicle():
     print("[MOCK] Check-in vehicle...")
@@ -31,6 +31,7 @@ def handle_action(user, choice):
             check_out_vehicle()
 
 def main():
+    User.load_users()  # Load dữ liệu user từ file data.json
     while True:
         print("1. Login\n2. Register\n0. Exit")
         opt = input("Choose: ")
@@ -38,7 +39,15 @@ def main():
             user = login()
             if user:
                 while True:
-                    show_menu_by_role(user)
+                    role = user.get_role()
+                    if role == "admin":
+                        User.admin_menu()
+                    elif role == "attendant":
+                        User.attendant_menu()
+                    elif role == "owner":
+                        User.owner_menu()
+                    else:
+                        print("Unknown role!")
                     choice = input("Your choice: ")
                     if choice == "0":
                         break
