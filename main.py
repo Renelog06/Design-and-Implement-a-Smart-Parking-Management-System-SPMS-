@@ -19,23 +19,55 @@ def view_reports():
 
 def handle_action(user, choice):
     role = user.get_role()
+    
     if role == "admin":
         if choice == "1":
             print("[MOCK] Configuring parking lot...")
         elif choice == "2":
+            print("[MOCK] Setting pricing...")
+        elif choice == "3":
+            print("[MOCK] Managing parking slots...")
+        elif choice == "4":
             view_reports()
+        elif choice == "5":
+            print("[MOCK] Exporting reports...")
+        elif choice == "6":
+            print("[MOCK] Deleting old records...")
+        else:
+            print("Invalid choice for admin.")
+
     elif role == "attendant":
         if choice == "1":
-            check_in_vehicle()
+            print("[MOCK] Check in...")
         elif choice == "2":
-            check_out_vehicle()
+            print("[MOCK] Check out...")
+        elif choice == "3":
+            print("[MOCK] Viewing available slots...")
+        elif choice == "4":
+            print("[MOCK] Viewing parked vehicles...")
+        elif choice == "5":
+            print("[MOCK] Preventing duplicate check-in...")
+        elif choice == "6":
+            print("[MOCK] Printing receipt...")
+        else:
+            print("Invalid choice for attendant.")
+
     elif role == "owner":
         if choice == "1":
-            print("[MOCK] Viewing available slots...")
+            print("[MOCK] Finding available slots...")
         elif choice == "2":
-            check_in_vehicle()
+            print("[MOCK] Registering vehicle...")
         elif choice == "3":
-            check_out_vehicle()
+            print("[MOCK] Viewing parking fee...")
+        elif choice == "4":
+            print("[MOCK] Making payment...")
+        elif choice == "5":
+            print("[MOCK] Viewing parking history...")
+        else:
+            print("Invalid choice for owner.")
+
+    else:
+        print(f"No actions defined for role '{role}'.")
 
 def main():
     while True:
