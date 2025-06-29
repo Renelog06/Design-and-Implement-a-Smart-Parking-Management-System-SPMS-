@@ -53,8 +53,8 @@ Below are the permissions and features available for each role:
 - [x] `auth.py`: Login
 - [ ] `user.py`: Role and login simulation
 - [ ] `slot.py`: Parking slot management **[📦 uses JSON]**
-- [ ] `vehicle.py`: Vehicle information
-- [ ] `transaction.py`: Check-in/out and fee calculation **[📦 uses JSON]**
+- [x] `vehicle.py`: Vehicle information
+- [x] `transaction.py`: Check-in/out and fee calculation **[📦 uses JSON]**
 - [x] `data_handler.py`: JSON file read/write **[🔧 JSON helper functions]**
 - [x] `report.py`: Revenue statistics and reports **[📦 uses JSON]**
 
