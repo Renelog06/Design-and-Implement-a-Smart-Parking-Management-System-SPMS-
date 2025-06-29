@@ -1,5 +1,5 @@
 from auth import login, register
-from user import show_menu_by_role
+from user import User
 from report import total_revenue, occupancy_rate, most_used_slots
 from data_handler import load_json
 
@@ -45,7 +45,7 @@ def main():
             user = login()
             if user:
                 while True:
-                    show_menu_by_role(user)
+                    user.show_menu_by_role()
                     choice = input("Your choice: ")
                     if choice == "0":
                         break

@@ -9,7 +9,8 @@ class User:
     def get_role(self):
         return self.role
 
- def admin_menu():
+    @staticmethod
+    def admin_menu():
         print("1. Configure parking lot")
         print("2. Set pricing")
         print("3. Manage parking slots")
@@ -27,6 +28,7 @@ class User:
         print("5. Prevent duplicate check-in")
         print("6. Print receipt")
         print("0. Exit")
+
     @staticmethod
     def owner_menu():
         print("1. Find available slots")
@@ -35,12 +37,14 @@ class User:
         print("4. Make payment")
         print("5. View parking history")
         print("0. Exit")
-        
-def show_menu_by_role(user):
-    role = user.get_role()
-    if role == "admin":
-        admin_menu()
-    elif role == "attendant":
-        attendant_menu()
-    elif role == "owner":
-        owner_menu()
+
+    def show_menu_by_role(self):
+        role = self.get_role()
+        if role == "admin":
+            User.admin_menu()
+        elif role == "attendant":
+            User.attendant_menu()
+        elif role == "owner":
+            User.owner_menu()
+        else:
+            print(f"No menu for role '{role}'")
