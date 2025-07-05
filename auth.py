@@ -1,5 +1,5 @@
 from data_handler import load_json, save_json
-from mockuser import User
+from user import User
 
 def register():
     users = load_json("data/users.json")
