@@ -25,10 +25,10 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 - [x] `report.py`: Revenue statistics and reports **[📦 uses JSON]**
 
 ### 📂 JSON Data Files
-- [ ] `data/slots.json`
-- [ ] `data/vehicles.json`
-- [ ] `data/transactions.json`
-- [ ] `data/users.json`
+- [x] `data/slots.json`
+- [x] `data/vehicles.json`
+- [x] `data/transactions.json`
+- [x] `data/users.json`
 
 ### 📸 Documentation
 - [x] Complete `README.md`
