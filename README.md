@@ -141,19 +141,4 @@ python main.py
 - Python 3.10
 - No third-party libraries required (`json`, `datetime`, `os` from standard library)
 
----
 
-## 🚀 How to Run
-
-```bash
-git clone https://github.com/Renelog06/Design-and-Implement-a-Smart-Parking-Management-System-SPMS-.git
-cd smart-parking-system
-python main.py
-```
-
-## 📦 Dependencies
-
-- Python 3.10
-- No third-party libraries required (`json`, `datetime`, `os` from standard library)
-
----
