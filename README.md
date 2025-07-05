@@ -28,6 +28,7 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 - [ ] `data/slots.json`
 - [ ] `data/vehicles.json`
 - [ ] `data/transactions.json`
+- [ ] `data/users.json`
 
 ### 📸 Documentation
 - [x] Complete `README.md`
