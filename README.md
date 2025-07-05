@@ -39,8 +39,8 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 # ✅ Task Checklist
 ## 🧑‍💻 Team Members & Responsibilities
 
-| Member | Responsibility | Files |
-|--------|----------------|--------|
+| Member | Responsibility | 
+|--------|----------------|
 | Phu Anh ( Team_leader) | Check in/out vehicles, Check in vehicles | 
 | Phi Truong | Add or delete parking slots |
 | Hieu | Set parking fees |
