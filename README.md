@@ -13,46 +13,12 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 - **Vehicle Owner**: View available slots, check and pay parking fees.
 
 ---
-
-## 🔐 Roles and Features
-
-Below are the permissions and features available for each role:
-
-### 🛡️ Admin
-- Configure parking lot (set total slots)
-- Set hourly rates
-- Add, update, or delete parking slots
-- View and export revenue reports
-- Monitor overall system performance
-
-### 👷 Parking Attendant
-- Check-in vehicles: assign available slots
-- Check-out vehicles: release slots and calculate fees
-- View current slot availability
-- Prevent duplicate check-ins
-
-### 🚗 Vehicle Owner
-- View available parking slots
-- Register/check-in their vehicle
-- View current parking fee
-- Pay and get receipt
-- Track their parking history
-
-| Role | Features |
-|------|----------|
-| Admin | Manage slots, set hourly rates, export revenue reports |
-| Parking Attendant | Check-in/out vehicles, update slots |
-| Vehicle Owner | View available slots, pay parking fees |
-
----
-
-## ✅ Task Checklist
-
+#File_need
 ### 🗂 Core Modules
 - [x] `main.py`: Command-line interface (CLI) menu
 - [x] `auth.py`: Login
-- [ ] `user.py`: Role and login simulation
-- [ ] `slot.py`: Parking slot management **[📦 uses JSON]**
+- [x] `user.py`: Role and login simulation
+- [x] `slot.py`: Parking slot management **[📦 uses JSON]**
 - [x] `vehicle.py`: Vehicle information
 - [x] `transaction.py`: Check-in/out and fee calculation **[📦 uses JSON]**
 - [x] `data_handler.py`: JSON file read/write **[🔧 JSON helper functions]**
@@ -64,23 +30,51 @@ Below are the permissions and features available for each role:
 - [ ] `data/transactions.json`
 
 ### 📸 Documentation
-- [v] Complete `README.md`
+- [x] Complete `README.md`
 - [ ] System flowchart
 - [ ] Program screenshots
 
 ---
-
+# ✅ Task Checklist
 ## 🧑‍💻 Team Members & Responsibilities
 
 | Member | Responsibility | Files |
 |--------|----------------|--------|
-| Phu Anh | Team leader, integration, main menu | `main.py` |
-| Phi Truong | Role and login management | `user.py` |
-| Hieu | Parking slot module | `slot.py` |
-| Hung | Vehicle and transaction logic | `vehicle.py`, `transaction.py` |
-| Nhut  | Data persistence and report generation | `data_handler.py`, `report.py` |
+| Phu Anh ( Team_leader) | Check in/out vehicles, Check in vehicles | 
+| Phi Truong | Add or delete parking slots |
+| Hieu | Set parking fees |
+| Hung | Reset/clear data before configuring the parking lot |
+| Nhut Truong  | Handle report generation and traceback errors |
 
 ---
+## 🔐 Roles & Features and Bugs
+Below are the permissions and features available for each role:
+Admin:
+- Configure parking lot settings. [ ]
+- View monthly revenue reports.[ ]
+- Set parking fees:[x]
+  1.Hourly fee: 2,000 VND/hour.
+  2.Daily fee: calculated as 24 hours * hourly rate.
+     > If parking exceeds 1 day: apply 10% additional fee.
+     > If parking exceeds 28 days: apply 20% monthly discount.
+- Add or delete parking slots. [x]
+
+Parking Attendant:
+- (not prioritized) Search for vehicles currently parked.[ ]
+- Check in/out vehicles.[x]
+- (not prioritized) View vehicle entry/exit history.[ ]
+- (not prioritized) View parking status (occupied slots with vehicle ID and available slots).[ ]
+
+Vehicle Owner:
+- (available slots) (not prioritized) View parking status. [ ]
+- Check in vehicles. [ ]
+- Check estimated parking fee: [ ]
+  1.Enter desired parking duration (hours/days).
+  2.System calculates the expected fee based on time.
+### BUGS
+- Reset/clear data before configuring the parking lot [x]
+- Handle report generation and traceback errors [x]
+- Update user module (currently using mock file) []
 
 ## 🛠️ Tools & Technologies
 
@@ -96,31 +90,6 @@ Below are the permissions and features available for each role:
 ---
 
 ## 🌟 Extended Features (Grouped)
-
-### 🧑‍🎓 Basic (Terminal-friendly)
-- [ ] Search vehicle by license plate
-- [ ] Export receipt as `.txt`
-- [ ] Show total fee paid by a vehicle
-- [ ] Prevent duplicate check-in
-
-### 💡 Practical Use-Cases
-- [ ] List vehicles currently parked
-- [ ] Sort slots by usage frequency
-- [ ] Revenue per day/week
-- [ ] Vehicle check-in/out history
-- [ ] Use real system time (datetime)
-- [ ] Show available slots
-
-### 🚀 Advanced Professional Features
-- [ ] Average parking time per vehicle
-- [ ] Vehicle type classification (car, bike, etc.)
-- [ ] Base fee + hourly fee
-- [ ] Tiered pricing (e.g., different after 2 hours)
-- [ ] Remove old records (>30 days)
-- [ ] Generate QR-style text for tickets
-- [ ] Log user actions in a log file
-- [ ] Peak hour analytics
-
 ---
 
 ## 🧭 Development Plan
@@ -149,6 +118,7 @@ smart-parking-system/
 │   ├── slots.json
 │   ├── vehicles.json
 │   └── transactions.json
+|   └── users.json
 ├── README.md
 └── .gitignore
 ```
@@ -164,69 +134,14 @@ git clone https://github.com/your-username/smart-parking-system.git
 cd smart-parking-system
 python main.py
 ```
-
 ---
 
 ## 📦 Dependencies
 
-- Python 3.x
+- Python 3.10
 - No third-party libraries required (`json`, `datetime`, `os` from standard library)
 
 ---
-
-## 📌 Future Improvements
-
-- [ ] Online reservation system
-- [ ] GUI (Tkinter / Flask)
-- [ ] Admin login system
-- [ ] SMS/Email notifications
-
-## 🔐 Role-Based Access & Permissions
-
-### 🛡️ 1. ADMIN – Administrator
-Has the highest level of access and is authorized to configure the entire system.
-
-✅ **Admin Permissions:**
-
-| Function | Description |
-|----------|-------------|
-| Configure parking lot | Set total slots, zones, and vehicle types |
-| Manage parking slots | Add, update, delete slots |
-| Set pricing | Define hourly rate, tiered pricing, base fees |
-| View reports | Generate revenue and occupancy statistics |
-| Export reports | Export data in CSV or TXT format |
-| Delete old records | Remove outdated transactions (e.g., older than 30 days) |
-
----
-
-### 👷 2. PARKING ATTENDANT – Staff
-Has permission to manage vehicles and slots, but cannot configure system settings.
-
-✅ **Attendant Permissions:**
-
-| Function | Description |
-|----------|-------------|
-| Vehicle check-in | Assign vehicles to available slots, record time |
-| Vehicle check-out | Release slot, calculate fee, record exit time |
-| View available slots | Display current available parking spots |
-| View parked vehicles | Show list of vehicles not yet checked out |
-| Prevent duplicate check-in | Block vehicles that haven't checked out from re-entering |
-| Print receipt (.txt) | Generate a text receipt after check-out |
-
----
-
-### 🚗 3. VEHICLE OWNER – Customer
-Simplified interface with access to basic viewing, registration, and payment features.
-
-✅ **Vehicle Owner Permissions:**
-
-| Function | Description |
-|----------|-------------|
-| Find available slots | View list of available parking spots |
-| Register vehicle | Enter license plate to check-in |
-| View parking fee | Display calculated parking fee |
-| Make payment | View and confirm parking fee payment |
-| View parking history | Show past check-ins, durations, and fees paid |
 
 ## 🚀 How to Run
 
@@ -236,11 +151,9 @@ cd smart-parking-system
 python main.py
 ```
 
----
-
 ## 📦 Dependencies
 
-- Python 3.x
+- Python 3.10
 - No third-party libraries required (`json`, `datetime`, `os` from standard library)
 
 ---
