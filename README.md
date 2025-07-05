@@ -85,7 +85,7 @@ Vehicle Owner:
 | Git + GitHub | Version control, team collaboration |
 | VS Code | Code editor |
 | JSON | Data storage format |
-| draw.io | Flowchart design |
+| Lucidchart | Flowchart design |
 | CSV (optional) | Report export format |
 
 ---
