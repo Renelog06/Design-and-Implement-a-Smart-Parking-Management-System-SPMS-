@@ -35,5 +35,3 @@ def most_used_slots(transactions):
         if c == max_count:
             most_slots.append(slot)
     return most_slots
-
-

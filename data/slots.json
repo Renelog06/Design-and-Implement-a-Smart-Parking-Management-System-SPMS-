@@ -1,0 +1,42 @@
+[
+  {
+    "slot_id": "A001",
+    "is_occupied": false
+  },
+  {
+    "slot_id": "A002",
+    "is_occupied": false
+  },
+  {
+    "slot_id": "A003",
+    "is_occupied": false
+  },
+  {
+    "slot_id": "A004",
+    "is_occupied": false
+  },
+  {
+    "slot_id": "A005",
+    "is_occupied": false
+  },
+  {
+    "slot_id": "A006",
+    "is_occupied": false
+  },
+  {
+    "slot_id": "A007",
+    "is_occupied": false
+  },
+  {
+    "slot_id": "A008",
+    "is_occupied": false
+  },
+  {
+    "slot_id": "A009",
+    "is_occupied": false
+  },
+  {
+    "slot_id": "A010",
+    "is_occupied": false
+  }
+]
