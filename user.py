@@ -15,14 +15,16 @@ def admin_menu():
     print("0. Logout")
 
 def attendant_menu():
-    print("1. Check-in vehicle")
-    print("2. Check-out vehicle")
+    print("1. View available slots")
+    print("2. Check-in vehicle")
+    print("3. Check-out vehicle")
     print("0. Logout")
 
 def owner_menu():
     print("1. View available slots")
     print("2. Check-in vehicle")
-    print("3. Check-out vehicle")
+    print("3. Check estimated parking fee")
+    print("4. Get slot by id")
     print("0. Logout")
 
 def show_menu_by_role(user):

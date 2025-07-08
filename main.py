@@ -1,9 +1,10 @@
 from auth import login, register
 from user import show_menu_by_role
 from slot import get_slot_by_id, get_available_slots, configure_parking_lot
-import transaction
 from report import total_revenue, occupancy_rate, most_used_slots
 from data_handler import load_json
+from check_in_out import check_in_vehicle_action, check_out_vehicle_action
+import transaction
 
 def configure_lot_action():
     try:
@@ -11,15 +12,6 @@ def configure_lot_action():
         configure_parking_lot(total)
     except ValueError:
         print("❌ Vui lòng nhập một số nguyên.")
-
-def check_in_vehicle_action():
-    plate = input("Nhập biển số xe: ").strip()
-    slot_id = input("Nhập vị trí đỗ (ví dụ: A001): ").strip().upper()
-    transaction.check_in(plate, slot_id)
-
-def check_out_vehicle_action():
-    plate = input("Nhập biển số xe: ").strip()
-    transaction.check_out(plate)
 
 def view_available_slots_action():
     available = get_available_slots()
@@ -56,8 +48,10 @@ def handle_action(user, choice):
             view_reports()
     elif role == "attendant":
         if choice == "1":
-            check_in_vehicle_action()
+            view_available_slots_action()
         elif choice == "2":
+            check_in_vehicle_action()
+        elif choice == "3":
             check_out_vehicle_action()
     elif role == "owner":
         if choice == "1":
@@ -65,7 +59,7 @@ def handle_action(user, choice):
         elif choice == "2":
             check_in_vehicle_action()
         elif choice == "3":
-            check_out_vehicle_action()
+            print("check estimated parking fee")
         elif choice == "4":
             get_slot_by_id("data/slots.json")
 
