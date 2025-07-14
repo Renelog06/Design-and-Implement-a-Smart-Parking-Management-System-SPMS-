@@ -41,18 +41,17 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 
 | Member | Responsibility | 
 |--------|----------------|
-| Phu Anh ( Team_leader) | Check in/out vehicles, Check in vehicles | 
-| Phi Truong | Add or delete parking slots |
+| Phu Anh ( Team_leader) | View parking status  | 
+| Phi Truong |  View vehicle entry/exit history|
 | Hieu | Set parking fees |
 | Hung | Reset/clear data before configuring the parking lot |
-| Nhut Truong  | Handle report generation and traceback errors |
+| Nhut Truong  | Search for vehicles currently parked |
 
 ---
 ## 🔐 Roles & Features and Bugs
 Below are the permissions and features available for each role:
 Admin:
 - Configure parking lot settings. [ ]
-- View monthly revenue reports.[ ]
 - Set parking fees:[x]
   1.Hourly fee: 2,000 VND/hour.
   2.Daily fee: calculated as 24 hours * hourly rate.
@@ -61,14 +60,14 @@ Admin:
 - Add or delete parking slots. [x]
 
 Parking Attendant:
-- (not prioritized) Search for vehicles currently parked.[ ]
+- (not prioritized) Search for vehicles currently parked.[x]
 - Check in/out vehicles.[x]
-- (not prioritized) View vehicle entry/exit history.[ ]
+- (not prioritized) View vehicle entry/exit history.[x]
 - (not prioritized) View parking status (occupied slots with vehicle ID and available slots).[ ]
 
 Vehicle Owner:
-- (available slots) (not prioritized) View parking status. [ ]
-- Check in vehicles. [ ]
+- (available slots) (not prioritized) View parking status. [x]
+- Check in vehicles. [x]
 - Check estimated parking fee: [ ]
   1.Enter desired parking duration (hours/days).
   2.System calculates the expected fee based on time.
