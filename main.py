@@ -3,6 +3,7 @@ from user import show_menu_by_role
 from slot import get_slot_by_id, get_available_slots, configure_parking_lot
 from report import total_revenue, occupancy_rate, most_used_slots
 from data_handler import load_json
+from addanddelete import add_slot_action, delete_slot_action 
 from check_in_out import check_in_vehicle_action, check_out_vehicle_action
 import transaction
 
@@ -46,6 +47,10 @@ def handle_action(user, choice):
             configure_lot_action()
         elif choice == "2":
             view_reports()
+        elif choice == "3":          
+            add_slot_action()
+        elif choice == "4":          
+            delete_slot_action()
     elif role == "attendant":
         if choice == "1":
             view_available_slots_action()

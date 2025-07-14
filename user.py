@@ -12,6 +12,8 @@ class User:
 def admin_menu():
     print("1. Configure parking lot")
     print("2. View revenue reports")
+    print("3. Add parking slot")
+    print("4. Delete parking slot")
     print("0. Logout")
 
 def attendant_menu():
