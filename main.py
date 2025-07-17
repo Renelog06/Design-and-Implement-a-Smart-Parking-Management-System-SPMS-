@@ -5,6 +5,7 @@ from report import total_revenue, occupancy_rate, most_used_slots
 from data_handler import load_json
 from addanddelete import add_slot_action, delete_slot_action 
 from check_in_out import check_in_vehicle_action, check_out_vehicle_action
+from search_vehicles import search_vehicle
 import transaction
 
 def configure_lot_action():
@@ -28,7 +29,7 @@ def view_reports():
     if not isinstance(transactions, list) or not transactions:
         print("ℹ️ Chưa có dữ liệu giao dịch để tạo báo cáo.")
         return
-        
+
     print("\n--- BÁO CÁO ---")
     print("Doanh thu hôm nay:", total_revenue(transactions, "daily"), "VND")
     print("Doanh thu tuần này:", total_revenue(transactions, "weekly"), "VND")
@@ -39,6 +40,10 @@ def view_reports():
     print("Tỷ lệ sử dụng chỗ đỗ:", occupancy_rate(transactions, total_slots), "%")
     print("Các vị trí được sử dụng nhiều nhất:", most_used_slots(transactions))
     print("------------")
+
+def search_currently_vechicles():
+    license_plate = input("Enter your license plate: ")
+    search_vehicle(license_plate)
 
 def handle_action(user, choice):
     role = user.get_role()
@@ -55,8 +60,10 @@ def handle_action(user, choice):
         if choice == "1":
             view_available_slots_action()
         elif choice == "2":
-            check_in_vehicle_action()
+            search_currently_vechicles()
         elif choice == "3":
+            check_in_vehicle_action()
+        elif choice == "4":
             check_out_vehicle_action()
     elif role == "owner":
         if choice == "1":

@@ -18,8 +18,9 @@ def admin_menu():
 
 def attendant_menu():
     print("1. View available slots")
-    print("2. Check-in vehicle")
-    print("3. Check-out vehicle")
+    print("2. Search for vehicles currently parked")
+    print("3. Check-in vehicle")
+    print("4. Check-out vehicle")
     print("0. Logout")
 
 def owner_menu():

@@ -7,5 +7,32 @@
     "check_out": "2025-06-29 11:43:06",
     "fee": 10000,
     "status": "completed"
+  },
+  {
+    "transaction_id": "61396dd9",
+    "license_plate": "A123",
+    "slot_id": "A001",
+    "check_in": "2025-07-17 21:11:39",
+    "check_out": "2025-07-17 21:12:44",
+    "fee": 10000,
+    "status": "completed"
+  },
+  {
+    "transaction_id": "55b3444d",
+    "license_plate": "AB123",
+    "slot_id": "A002",
+    "check_in": "2025-07-17 21:12:57",
+    "check_out": "2025-07-17 21:13:52",
+    "fee": 10000,
+    "status": "completed"
+  },
+  {
+    "transaction_id": "cae24de2",
+    "license_plate": "A004",
+    "slot_id": "A003",
+    "check_in": "2025-07-17 21:30:12",
+    "check_out": null,
+    "fee": 0,
+    "status": "parked"
   }
 ]
