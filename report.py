@@ -1,5 +1,4 @@
 from datetime import datetime
-from data_handler import load_json
 
 def total_revenue(transactions, period = "daily"):
     total = 0

@@ -9,7 +9,7 @@
   },
   {
     "slot_id": "A003",
-    "is_occupied": false
+    "is_occupied": true
   },
   {
     "slot_id": "A004",
