@@ -32,7 +32,7 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 
 ### 📸 Documentation
 - [x] Complete `README.md`
-- [x] System flowchartflowchart | https://lucid.app/lucidchart/6e7376f1-f272-4037-93f4-e2eb8ff7d5be/edit?invitationId=inv_9ae8547b-71dd-494b-925a-b7a92cfb239d&page=0_0#
+- [x] System flowchartflowchart | https://www.mermaidchart.com/app/projects/48b8d78c-f824-49f7-9495-f6d22a6b15d6/diagrams/1b35f458-33a6-4991-826e-6c2debac533c/version/v0.1/edit
 ---
 # ✅ Task Checklist
 ## 🧑‍💻 Team Members & Responsibilities
@@ -81,7 +81,7 @@ Vehicle Owner:
 | Git + GitHub | Version control, team collaboration |
 | VS Code | Code editor |
 | JSON | Data storage format |
-| Lucidchart | Flowchart design | 
+| mermaidchart with AI| Flowchart design | 
 
 ---
 
