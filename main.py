@@ -6,7 +6,8 @@ from data_handler import load_json
 from addanddelete import add_slot_action, delete_slot_action 
 from check_in_out import check_in_vehicle_action, check_out_vehicle_action
 from search_vehicles import search_vehicle
-import transaction
+from transaction import get_slot_by_id
+from fee import config_pricing_setting, display_pricing_info
 
 def configure_lot_action():
     try:
@@ -45,6 +46,7 @@ def search_currently_vechicles():
     license_plate = input("Enter your license plate: ")
     search_vehicle(license_plate)
 
+
 def handle_action(user, choice):
     role = user.get_role()
     if role == "admin":
@@ -56,6 +58,10 @@ def handle_action(user, choice):
             add_slot_action()
         elif choice == "4":          
             delete_slot_action()
+        elif choice == "5":          
+            display_pricing_info()
+        elif choice == "6":          
+            config_pricing_setting()
     elif role == "attendant":
         if choice == "1":
             view_available_slots_action()
@@ -65,6 +71,8 @@ def handle_action(user, choice):
             check_in_vehicle_action()
         elif choice == "4":
             check_out_vehicle_action()
+        elif choice == "5":          
+            display_pricing_info()
     elif role == "owner":
         if choice == "1":
             view_available_slots_action()
@@ -74,6 +82,10 @@ def handle_action(user, choice):
             print("check estimated parking fee")
         elif choice == "4":
             get_slot_by_id("data/slots.json")
+        elif choice == "5":          
+            display_pricing_info()
+        elif choice == "6":          
+            config_pricing_setting()
 
 def main():
     while True:
