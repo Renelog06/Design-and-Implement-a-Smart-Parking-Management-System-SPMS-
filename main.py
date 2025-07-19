@@ -7,6 +7,7 @@ from addanddelete import add_slot_action, delete_slot_action
 from check_in_out import check_in_vehicle_action, check_out_vehicle_action
 from search_vehicles import search_vehicle
 import transaction
+from view_vehicle_history import view_history_action
 
 def configure_lot_action():
     try:
@@ -56,6 +57,8 @@ def handle_action(user, choice):
             add_slot_action()
         elif choice == "4":          
             delete_slot_action()
+        elif choice == "5":
+            view_history_action()
     elif role == "attendant":
         if choice == "1":
             view_available_slots_action()
@@ -65,6 +68,8 @@ def handle_action(user, choice):
             check_in_vehicle_action()
         elif choice == "4":
             check_out_vehicle_action()
+        elif choice=="5":
+            view_history_action()
     elif role == "owner":
         if choice == "1":
             view_available_slots_action()

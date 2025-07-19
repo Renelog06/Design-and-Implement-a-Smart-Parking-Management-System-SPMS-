@@ -14,6 +14,7 @@ def admin_menu():
     print("2. View revenue reports")
     print("3. Add parking slot")
     print("4. Delete parking slot")
+    print("5. View transaction history")
     print("0. Logout")
 
 def attendant_menu():
@@ -21,6 +22,7 @@ def attendant_menu():
     print("2. Search for vehicles currently parked")
     print("3. Check-in vehicle")
     print("4. Check-out vehicle")
+    print("5. View transaction history")
     print("0. Logout")
 
 def owner_menu():
@@ -28,6 +30,7 @@ def owner_menu():
     print("2. Check-in vehicle")
     print("3. Check estimated parking fee")
     print("4. Get slot by id")
+    print("5. View transaction history")
     print("0. Logout")
 
 def show_menu_by_role(user):
