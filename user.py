@@ -29,10 +29,8 @@ def attendant_menu():
 def owner_menu():
     print("1. View available slots")
     print("2. Check-in vehicle")
-    print("3. Check estimated parking fee")
-    print("4. Get slot by id")
-    print("5. View current pricing")  #(?)
-    print("6. Configure pricing settings")  #(?)
+    print("3. Get slot by id")
+    print("4. View current pricing")  #(?)
     print("0. Logout")
 
 def show_menu_by_role(user):
