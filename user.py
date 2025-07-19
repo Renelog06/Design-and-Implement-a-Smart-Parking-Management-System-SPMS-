@@ -16,6 +16,7 @@ def admin_menu():
     print("4. Delete parking slot")
     print("5. View current pricing")  #(?)
     print("6. Configure pricing settings")  #(?)
+    print("7. View vehicle history")
     print("0. Logout")
 
 def attendant_menu():
@@ -24,6 +25,7 @@ def attendant_menu():
     print("3. Check-in vehicle")
     print("4. Check-out vehicle")
     print("5. View current pricing")  #(?)
+    print("6. View vehicle history")
     print("0. Logout")
 
 def owner_menu():

@@ -9,6 +9,7 @@ from check_in_out import check_in_vehicle_action, check_out_vehicle_action
 from search_vehicles import search_vehicle
 from transaction import get_slot_by_id
 from fee import config_pricing_setting, display_pricing_info
+from view_vehicle_history import *
 # <<< PHẦN CẬP NHẬT NẰM Ở HÀM NÀY >>>
 def configure_lot_action():
     """Hỏi xác nhận trước khi xóa dữ liệu cũ và cấu hình lại bãi xe."""
@@ -77,6 +78,8 @@ def handle_action(user, choice):
             display_pricing_info()
         elif choice == "6":          
             config_pricing_setting()
+        elif choice == "7":
+            view_history_action()
     elif role == "attendant":
         if choice == "1":
             view_available_slots_action()
@@ -88,6 +91,8 @@ def handle_action(user, choice):
             check_out_vehicle_action()
         elif choice == "5":          
             display_pricing_info()
+        elif choice == "6":
+            view_history_action()
     elif role == "owner":
         if choice == "1":
             view_available_slots_action()
