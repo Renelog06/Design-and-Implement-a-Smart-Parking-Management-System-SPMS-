@@ -19,25 +19,25 @@ def search_by_date(start,end):
             if start<=check_out_date<=end:
                 day.append(i)
         else:
-            i['check_out'] = "Vẫn đang đậu"
+            i['check_out'] = "Still Parked"
             day.append(i)
     return day
 
 def display_transaction_history(start, end):
     transaction= search_by_date(start, end)
     if transaction==[]:
-        print("Không có giao dịch nào trong khoảng thời gian này.")
+        print("No transactions found in this time period.")
     else:
-        print(f"=== CÁC GIAO DỊCH TỪ {start} ĐẾN {end} ===")
+        print(f"=== TRANSACTIONS FROM {start} TO {end} ===")
         for i in transaction:
-            print(f"Biển số: {i['license_plate']}")
-            print(f"Vị trí: {i['slot_id']}")
-            print(f"Ngày vào: {i['check_in']}")
-            print(f"Ngày ra: {i['check_out']}")
-            print(f"Trạng thái: {i['status']}")
+            print(f"License Plate: {i['license_plate']}")
+            print(f"Slot ID: {i['slot_id']}")
+            print(f"Check In: {i['check_in']}")
+            print(f"Check Out: {i['check_out']}")
+            print(f"Status: {i['status']}")
             print("-" * 30)
 def view_history_action():
-    print("=== XEM LỊCH SỬ GIAO DỊCH ===")
-    start = input("Nhập ngày bắt đầu (YYYY-MM-DD): ")
-    end = input("Nhập ngày kết thúc (YYYY-MM-DD): ")
+    print("=== VIEW TRANSACTION HISTORY ===")
+    start = input("Enter start date (YYYY-MM-DD): ")
+    end = input("Enter end date (YYYY-MM-DD): ")
     display_transaction_history(start, end)
