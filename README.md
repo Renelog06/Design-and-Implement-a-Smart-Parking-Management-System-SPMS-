@@ -17,11 +17,11 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 ### 🗂 Core Modules
 - [x] `main.py`: Command-line interface (CLI) menu | Phú Anh
 - [x] `auth.py`: Login | Phú Anh
+- [ ] `data_handler.py`: JSON file read/write **[🔧 JSON helper functions]** | Nhựt Trường
 - [x] `user.py`: Role and login simulation| Phi Trường
 - [x] `slot.py`: Parking slot management **[📦 uses JSON]** |Hiếu
 - [x] `vehicle.py`: Vehicle information | Hưng
 - [x] `transaction.py`: Check-in/out and fee calculation **[📦 uses JSON]** | Hưng
-- [x] `data_handler.py`: JSON file read/write **[🔧 JSON helper functions]** | Nhựt Trường
 - [x] `report.py`: Revenue statistics and reports **[📦 uses JSON]** | Nhựt Trường
 
 
