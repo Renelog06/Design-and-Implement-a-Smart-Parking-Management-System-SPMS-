@@ -103,8 +103,8 @@ Vehicle Owner:
 ## 🚀 How to Run
 
 ```bash
-git clone https://github.com/your-username/smart-parking-system.git
-cd smart-parking-system
+git clone https://github.com/Renelog06/Design-and-Implement-a-Smart-Parking-Management-System-SPMS-.git
+cd Design-and-Implement-a-Smart-Parking-Management-System-SPMS-
 python main.py
 ```
 ---
