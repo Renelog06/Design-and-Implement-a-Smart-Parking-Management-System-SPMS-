@@ -17,7 +17,7 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 ### 🗂 Core Modules
 - [x] `main.py`: Command-line interface (CLI) menu | Phú Anh
 - [x] `auth.py`: Login | Phú Anh
-- [ ] `data_handler.py`: JSON file read/write **[🔧 JSON helper functions]** | Nhựt Trường
+- [x] `data_handler.py`: JSON file read/write **[🔧 JSON helper functions]** | Nhựt Trường
 - [x] `user.py`: Role and login simulation| Phi Trường
 - [x] `slot.py`: Parking slot management **[📦 uses JSON]** |Hiếu
 - [x] `vehicle.py`: Vehicle information | Hưng
@@ -38,13 +38,13 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 # ✅ Task Checklist
 ## 🧑‍💻 Team Members & Responsibilities
 
-| Member | Responsibility | 
-|--------|----------------|
-| Phu Anh ( Team_leader) | View parking status  | 
-| Phi Truong |  View vehicle entry/exit history|
-| Hieu | Set parking fees |
-| Hung | Reset/clear data before configuring the parking lot |
-| Nhut Truong  | Search for vehicles currently parked |
+| Member | Responsibility | Rate |
+|--------|----------------|------|
+| Phu Anh ( Team_leader) | View parking status  | 20% |
+| Phi Truong |  View vehicle entry/exit history| 20% |
+| Hieu | Set parking fees | 20% |
+| Hung | Reset/clear data before configuring the parking lot | 20% |
+| Nhut Truong  | Search for vehicles currently parked | 20% |
 
 ---
 ## 🔐 Roles & Features and Bugs
