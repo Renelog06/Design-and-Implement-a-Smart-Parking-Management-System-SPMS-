@@ -38,13 +38,13 @@ This system allows managing parking slots, checking vehicles in/out, calculating
 # ✅ Task Checklist
 ## 🧑‍💻 Team Members & Responsibilities
 
-| Member | Responsibility | Rate |
+| Member |TMP Responsibility | Core Responsibility | Rate |
 |--------|----------------|------|
-| Phu Anh ( Team_leader) | View parking status  | 20% |
-| Phi Truong |  View vehicle entry/exit history| 20% |
-| Hieu | Set parking fees | 20% |
-| Hung | Reset/clear data before configuring the parking lot | 20% |
-| Nhut Truong  | Search for vehicles currently parked | 20% |
+| Phu Anh ( Team_leader) | View parking status | main, auth | 20% |
+| Phi Truong |  View vehicle entry/exit history| user |20% |
+| Hieu | Set parking fees | slot | 20% |
+| Hung | Reset/clear data before configuring the parking lot | transaction, vehicle  | 20% |
+| Nhut Truong  | Search for vehicles currently parked | data, report | 20% |
 
 ---
 ## 🔐 Roles & Features and Bugs
