@@ -6,22 +6,22 @@ def load_transactions():
     transaction=load_json('data/transactions.json')
     return transaction
 
-def search_by_date(start,end): 
-    transaction=load_transactions() 
-    day= []
-    for i in transaction: 
-        check_in_date=i['check_in'][:10]
-        if start <= check_in_date <= end:
-            day.append(i)
-    for i in transaction:
-        if i['check_out'] is not None:  
-            check_out_date=i['check_out'][:10]
-            if start<=check_out_date<=end:
-                day.append(i)
-        else:
-            i['check_out'] = "Still Parked"
-            day.append(i)
-    return day
+def search_by_date(start, end): 
+    transactions = load_transactions() 
+    matched = []
+    for tr in transactions:
+        ci = tr['check_in'][:10]
+        co = tr['check_out'][:10] if tr['check_out'] else None
+
+        # nếu chưa check out thì gán nhãn
+        if tr['check_out'] is None:
+            tr['check_out'] = "Still Parked"
+
+        # chỉ append một lần nếu check-in hoặc check-out nằm trong khoảng
+        if (start <= ci <= end) or (co and start <= co <= end):
+            matched.append(tr)
+
+    return matched
 
 def display_transaction_history(start, end):
     transaction= search_by_date(start, end)
