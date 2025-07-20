@@ -1,13 +1,13 @@
 from datetime import datetime
 
-def total_revenue(transactions, period = "daily"):
+def total_revenue(transactions, period):
     total = 0
     for transaction in transactions:
         if transaction["status"] != "completed":
             continue
         else:
             check_out = datetime.strptime(transaction["check_out"], "%Y-%m-%d %H:%M:%S")
-            if period == "daily" and check_out.date() == datetime.now().date() and check_out.year == datetime.now().year:
+            if period == "daily" and check_out.date() == datetime.now().date():
                 total += transaction["fee"]
             elif period == "weekly" and check_out.isocalendar()[1] == datetime.now().isocalendar()[1] and check_out.year == datetime.now().year:
                 total += transaction["fee"]
