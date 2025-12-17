@@ -1,4 +1,4 @@
-
+/F-SEC{lol_do_u_think_it_is_riel}
 from auth import login, register
 from user import show_menu_by_role
 from slot import get_slot_by_id, get_available_slots, configure_parking_lot
@@ -135,3 +135,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
